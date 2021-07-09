@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CheckOut</title>
+        <link rel="stylesheet" href="./checkout.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script rel="text/script" src="./checkout.js"></script>
+    </head>
+    <body>
+      <div id="online-shoping-app">
+        <header>
+          <nav id="topbar">
+            <div id="left-menu">
+              <div id="sidebar">
+                <i class="fas fa-times" style="font-size: 18px; color:red;margin-left: 180px;" onclick="sidebarclose()" ></i>
+                <a href="/index.html" id="sidebarHome" class="default-color" onclick="sidebarclose()" >Home</a>
+              <a href="/index.html#clothing-section" id="sidebartopbar-clothing" class="default-color" onclick="sidebarclose()" >Clothing</a>
+              <a href="/index.html#accessory-section" id="sidebartopbar-accessories" class="default-color" onclick="sidebarclose()" >Accessories</a>
+              </div>
+              <i class="fas fa-bars" style="font-size: 18px;" onclick="sidebar()" id="menu-bar"></i>
+              <h1 id="logo">Shoplane</h1>
+              <a href="/index.html" id="Home" class="default-color" onclick="navigation(`${id}`)">Home</a>
+              <a href="/index.html#clothing-section" id="topbar-clothing" class="default-color" onclick="navigation(`${id}`)">Clothing</a>
+              <a href="/index.html#accessory-section" id="topbar-accessories" class="default-color" onclick="navigation(`${id}`)">Accessories</a>
+            </div>
+              <div id="right-menu">
+                <i class="fas fa-search" id="search-icon"></i>
+                <div id="cart-wrapper">
+                  <p id="cart-count">0</p>
+                  <a href="/checkout.html"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <img src="images/user_avatar.jpg" />
+              </div>
+          </nav>
+        </header>
+        <main id="main">
+            <section id="main-section">
+                <h1 id="main-heading">Checkout</h1>
+    
+                <div id="content-wrapper">
+                    <div id="card-list">
+                        <h3 class="section-heading">Total Items: <span id="item-count">0</span></h3>
+                    </div>
+    
+                    <div>
+                        <h3 class="section-heading">Total Amount</h3>
+                        <p>Amount: Rs<span id="total-amount">0</span></p>
+                        <button id="btn-place-order">Place Order</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <img id="edyoda-logo" src="../images/edyoda-projects-logo.png" alt="logo"/>
+        <footer>
+          <div>
+            <p class="footer-heading">Online Store</p>
+            <a href="/" class="footer-link">Men Clothing</a>
+            <a href="/" class="footer-link">Women Clothing</a>
+            <a href="/" class="footer-link">Men Accessories</a>
+            <a href="/" class="footer-link">Women Accessories</a>
+          </div>
+          <div>
+            <p class="footer-heading">Helpful Links</p>
+            <a href="/" class="footer-link">Home</a>
+            <a href="/" class="footer-link">About</a>
+            <a href="/" class="footer-link">Contact</a>
+          </div>
+          <div>
+            <p class="footer-heading">Partners</p>
+            <a href="/" class="footer-link">Zara</a>
+            <a href="/" class="footer-link">Pantaloons</a>
+            <a href="/" class="footer-link">Levis</a>
+            <a href="/" class="footer-link">UCB</a>
+            <a href="/" class="footer-link">+ Many More</a>
+          </div>
+          <div>
+            <p class="footer-heading">Address</p>
+            <p href="/" class="footer-link">Building 101</p>
+            <p href="/" class="footer-link">Central Avenue</p>
+            <p href="/" class="footer-link">LA - 902722</p>
+            <p href="/" class="footer-link">United States</p>
+          </div>
+        </footer>   
+      </div>
+
+      <script>
+        function navigation(id){
+            var remove=document.getElementsByClassName("active-color");
+            remove[0].className="default-color";
+            $("#"+id).removeClass("default-color");
+            $("#"+id).addClass("active-color");
+           
+        }
+        function sidebar(){
+          $("#sidebar").css({"transform":"translateX(0%)"})
+        }
+        function sidebarclose(){
+          $("#sidebar").css({"transform":"translateX(-110%)"})
+        }
+      </script>
+
+    </body>
+</html>

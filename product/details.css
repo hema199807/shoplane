@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 20px;
+    margin-top: 105px;
+    margin-bottom: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+body{
+    background-image: linear-gradient(to right, #FFBF91,#FF9449,#FFBF91);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#online-shoping-app{
+    margin:2% auto;
+    width:92%;
+    height: 89vh;
+    background-color: #FFEBC1;
+    border-radius: 20px;
+    border:5px solid white;
+    overflow:auto; 
+}
+#topbar{
+    background-image: linear-gradient(to right,pink,#FFEBC1,pink);
+    width:90.9%;
+    border-top-left-radius: 20px;
+    z-index: 10;
+    border-top-right-radius: 20px;
+    margin:2.3% auto;
+    position: fixed;
+    top: 0;
+    left: 4.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px 8%;
+}
+#sidebar{
+    text-align: center;
+    width:200px;
+    height:50vh;
+    background-color: white;
+    margin:2.3% auto;
+    position:fixed;
+    top:70px;
+    left:14px;
+    z-index: 20;
+    transform: translateX(-110%);
+    transition: transform 300ms;
+}
+#left-menu {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+#left-menu > #logo {
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    bottom:5px;
+    right:40px;
+    color:cyan;
+    text-shadow: 1px 3px 2px chartreuse;
+}
+#Home{
+    text-decoration: none;
+    margin-left: 200px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+#left-menu > #Home:hover {
+    color: orangered;
+}
+#topbar-clothing {
+    text-decoration: none;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+#topbar-clothing:hover {
+    color: orangered;
+}
+#topbar-accessories{
+    text-decoration: none;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+#topbar-accessories:hover {
+    color: orangered;
+}
+.active-color{
+    color: orangered; 
+}
+.default-color{
+    color:darkslateblue;
+}
+#search-icon {
+    color:black;
+    font-size: 18px;
+    margin-right:25px;
+}
+#right-menu {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+#cart-wrapper {
+    position: relative;
+    margin-left: 2px;
+}
+
+#cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+
+#cart-wrapper > a {
+    text-decoration: none;
+    color: black;
+}
+#cart-wrapper i {
+    font-size: 18px;
+    cursor: pointer;
+}
+#right-menu > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    left:40px;
+}
+#main{
+   margin-top: 109px;
+}
+#product-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2% 8%;
+    box-sizing: border-box;
+}
+#product-image-div{
+    width: 40%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+#product-details-image{
+    width: 100%;
+    box-sizing: border-box;
+}
+#product-details-div{
+    align-self: flex-start;
+    width: 60%;
+    box-sizing: border-box;
+    z-index: 5;
+}
+#product-title {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+    color: orangered;
+}
+#product-brand {
+    font-weight: 600;
+    color: black;
+    opacity: 0.6;
+    margin: 0;
+    margin-top: 8px;
+}
+.product-section-heading {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 36px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.product-section-heading:first-of-type {
+    margin-bottom: 0;
+}
+#product-details-price {
+    max-width: 500px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #009688;
+    margin: 0;
+    display: inline-block;
+}
+#product-description {
+    max-width: 500px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: 400;
+    color:darkgoldenrod;
+}
+#preview-wrapper{
+    display: flex;
+}
+#preview-wrapper > img {
+    width: 50px;
+    border-radius: 6px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px;
+   
+}
+#preview-wrapper > img:first-of-type {
+    margin-left: 0;
+}
+.active-image {
+    box-sizing: content-box;
+    border: 2px solid #009688;
+}
+#btn-add-to-cart {
+    background-image: linear-gradient(60deg,pink,deeppink,lightpink);
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    padding: 16px 30px;
+    border-radius: 6px;
+    margin-top: 36px;
+    font-weight: 600;
+    color:white;
+    white-space: nowrap;
+}
+#edyoda-logo{
+    width: 118px;
+    position: fixed;
+    bottom: 121px;
+    right: 84px;
+}
+footer{
+    width: 100%;
+    background-color:darkslategrey; 
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4% 8%;
+    margin-top: 80px;
+}
+footer > div {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+footer > div:first-of-type {
+    padding-left: 0;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+footer > div .footer-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+}
+@media (max-width:425px){
+    #left-menu > #logo {
+        font-size: 28px;
+        bottom: 4px;
+        right: -11px;
+    }
+    #Home{
+        display:none;
+    }
+    #topbar-clothing{
+        display: none;
+    }
+    #topbar-accessories{
+        display: none;
+    }
+    #search-icon{
+        font-size: 15px;
+        margin-right:5px;
+    }
+    #right-menu > img {
+        width: 30px;
+        height: 30px;
+        left:20px;
+    }
+    #sidebarHome{
+        display: block;
+        font-size:20px;
+        text-decoration: none;
+        padding:8px 10px;
+    }
+    #sidebarHome:hover {
+        color: orangered;
+    }
+    #sidebartopbar-clothing{
+        display: block;
+        font-size:20px;
+        text-decoration: none;
+        padding:8px 10px;
+    }
+    #sidebartopbar-clothing:hover {
+        color: orangered;
+    }
+    #sidebartopbar-accessories{
+        display: block;
+        font-size:20px;
+        text-decoration: none;
+        padding:8px 10px;
+    }
+    #sidebartopbar-accessories:hover {
+        color: orangered;
+    }
+    #product-title{
+        font-size: 20px;
+    }
+    #product-brand{
+        font-size: 18px;
+    }
+    .product-section-heading {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    #product-details-price{
+        font-size: 18px;
+    }
+    #preview-wrapper{
+        max-width: 500px;
+        flex-wrap: wrap;
+        
+    }
+    #preview-wrapper > img {
+        width: 40px;   
+    }
+    #btn-add-to-cart{
+        padding:10px 20px;
+    }
+    #edyoda-logo{
+        width: 70px;
+        position: fixed;
+        bottom: 80px;
+        right: 50px;
+    }
+    footer{
+        margin-top: 45px; 
+        flex-direction: column;
+    }
+    footer > div{
+        padding-left:0;
+        padding-right:0;
+        
+    }
+    .footer-heading{
+        text-align:center;
+        padding-top:20px;
+    }
+    footer > div .footer-link{
+        text-align: center;
+    }
+}
+
+@media (min-width:900px){
+    #Home{
+        margin-left: 100px;
+    }
+    #menu-bar{
+        display:none;
+    }
+   
+}
+@media (min-width:1200px){
+    #Home{
+        margin-left: 150px;
+    }
+    #menu-bar{
+        display:none;
+    }
+    
+}
