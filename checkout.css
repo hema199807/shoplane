@@ -273,6 +273,7 @@ footer{
     justify-content: center;
     box-sizing: border-box;
     padding: 4% 8%;
+    margin-bottom:0;
     
 }
 footer > div {
