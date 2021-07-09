@@ -257,6 +257,7 @@ footer{
     box-sizing: border-box;
     padding: 4% 8%;
     margin-top: 250px;
+    margin-bottom:0;
 }
 footer > div {
     padding-left: 60px;
